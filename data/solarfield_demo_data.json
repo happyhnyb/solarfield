@@ -1,0 +1,1415 @@
+{
+  "meta": {
+    "company": "SOLARFIELD",
+    "tagline": "Good energy. No guesswork.",
+    "currency": "EUR",
+    "locale": "de-DE",
+    "dataStatus": "Fictional demo data. Product names, specifications, prices and case studies are invented for a prototype and do not describe real products or real customers.",
+    "priceNote": "Demo prices per unit in EUR. Tax treatment and delivery costs are not modelled in this demo.",
+    "sourcingNote": "SOLARFIELD holds no stock. Each item is sourced from a vendor after you order; the lead time is confirmed in writing before anything is charged."
+  },
+  "categories": [
+    {
+      "id": "panel",
+      "label": "Solar panel",
+      "plural": "Solar panels",
+      "summary": "Monocrystalline modules for pitched residential roofs and larger commercial arrays.",
+      "image": "img/surface-mono-black.jpg"
+    },
+    {
+      "id": "inverter",
+      "label": "Hybrid inverter",
+      "plural": "Hybrid inverters",
+      "summary": "Converts panel output for the house and grid, and manages a battery on the same unit.",
+      "image": "img/utility-inverter.jpg"
+    },
+    {
+      "id": "storage",
+      "label": "Storage",
+      "plural": "Storage",
+      "summary": "Modular lithium iron phosphate batteries that pair with a hybrid inverter.",
+      "image": "img/utility-battery.jpg"
+    },
+    {
+      "id": "mounting",
+      "label": "Mounting",
+      "plural": "Mounting",
+      "summary": "Hooks, rails and clamps for fixing framed modules to clay and concrete tile roofs.",
+      "image": "img/mount-tile-roof.jpg"
+    }
+  ],
+  "products": [
+    {
+      "id": "arc-430",
+      "name": "ARC 430",
+      "category": "panel",
+      "keySpec": {
+        "label": "Rated power",
+        "value": 430,
+        "unit": "Wp"
+      },
+      "price": 149,
+      "summary": "Full-black 108 half-cell module sized for standard residential roofs.",
+      "description": "ARC 430 is the smaller of the two residential modules. Its 1722 mm length fits more rows on short roof faces, and the black frame and backsheet suit dark tile roofs. Pairs with ROOF KIT / TILE.",
+      "suitableFor": [
+        "Homeowners",
+        "Installers"
+      ],
+      "images": [
+        {
+          "src": "img/surface-mono-black.jpg",
+          "alt": "Close-up of a black monocrystalline module surface with fine silver busbars",
+          "caption": "Monocrystalline surface, macro.",
+          "illustrative": true
+        },
+        {
+          "src": "img/house-brick-mainz.jpg",
+          "alt": "Brick house in Mainz with black solar modules on a dark tiled roof",
+          "caption": "Full-black modules on a dark tile roof.",
+          "illustrative": true
+        },
+        {
+          "src": "img/mount-tile-chimney.jpg",
+          "alt": "Rows of solar modules on a tiled roof beside a brick chimney and satellite dish",
+          "caption": "Module rows around roof obstructions.",
+          "illustrative": true
+        }
+      ],
+      "specs": [
+        {
+          "group": "Electrical (STC)",
+          "items": [
+            {
+              "label": "Rated power",
+              "value": "430",
+              "unit": "Wp"
+            },
+            {
+              "label": "Power tolerance",
+              "value": "0 / +5",
+              "unit": "W"
+            },
+            {
+              "label": "Module efficiency",
+              "value": "22.0",
+              "unit": "%"
+            },
+            {
+              "label": "Voltage at max. power (Vmp)",
+              "value": "32.4",
+              "unit": "V"
+            },
+            {
+              "label": "Current at max. power (Imp)",
+              "value": "13.28",
+              "unit": "A"
+            },
+            {
+              "label": "Open-circuit voltage (Voc)",
+              "value": "38.9",
+              "unit": "V"
+            },
+            {
+              "label": "Short-circuit current (Isc)",
+              "value": "14.05",
+              "unit": "A"
+            },
+            {
+              "label": "Temperature coefficient Pmax",
+              "value": "−0.30",
+              "unit": "%/°C"
+            }
+          ]
+        },
+        {
+          "group": "Mechanical",
+          "items": [
+            {
+              "label": "Cell type",
+              "value": "Mono, n-type, 108 half-cells",
+              "unit": ""
+            },
+            {
+              "label": "Dimensions (L × W × H)",
+              "value": "1722 × 1134 × 30",
+              "unit": "mm"
+            },
+            {
+              "label": "Weight",
+              "value": "21.0",
+              "unit": "kg"
+            },
+            {
+              "label": "Front glass",
+              "value": "3.2",
+              "unit": "mm"
+            },
+            {
+              "label": "Frame",
+              "value": "Anodised aluminium, black",
+              "unit": ""
+            },
+            {
+              "label": "Connector cable length",
+              "value": "1200",
+              "unit": "mm"
+            }
+          ]
+        },
+        {
+          "group": "Warranty (manufacturer-stated, demo)",
+          "items": [
+            {
+              "label": "Product warranty",
+              "value": "15",
+              "unit": "years"
+            },
+            {
+              "label": "Linear performance warranty",
+              "value": "30 years to 87.4 %",
+              "unit": ""
+            }
+          ]
+        }
+      ],
+      "compare": {
+        "power_w": 430,
+        "efficiency_pct": 22.0,
+        "length_mm": 1722,
+        "width_mm": 1134,
+        "weight_kg": 21.0,
+        "voc_v": 38.9,
+        "tempco_pct": -0.3
+      },
+      "documents": [
+        {
+          "label": "Datasheet",
+          "format": "PDF",
+          "status": "Sent with quote"
+        },
+        {
+          "label": "Installation manual",
+          "format": "PDF",
+          "status": "Sent with quote"
+        }
+      ],
+      "compatibleWith": [
+        "convert-6",
+        "roof-kit-tile"
+      ]
+    },
+    {
+      "id": "arc-455",
+      "name": "ARC 455",
+      "category": "panel",
+      "keySpec": {
+        "label": "Rated power",
+        "value": 455,
+        "unit": "Wp"
+      },
+      "price": 169,
+      "summary": "Longer 108 half-cell module for more output per row where the roof face allows.",
+      "description": "ARC 455 shares the ARC 430's width and frame but is 40 mm longer and rated 25 Wp higher. Choose it when the rafter length allows, as fewer modules can reach the same system size.",
+      "suitableFor": [
+        "Homeowners",
+        "Installers"
+      ],
+      "images": [
+        {
+          "src": "img/panel-edge-sky.jpg",
+          "alt": "Low-angle view along a row of blue solar modules against a cloudy sky",
+          "caption": "Module row, low angle.",
+          "illustrative": true
+        },
+        {
+          "src": "img/house-zero-energy.jpg",
+          "alt": "Brick house with a red tiled roof carrying two blocks of solar modules",
+          "caption": "Two module blocks on a red tile roof.",
+          "illustrative": true
+        }
+      ],
+      "specs": [
+        {
+          "group": "Electrical (STC)",
+          "items": [
+            {
+              "label": "Rated power",
+              "value": "455",
+              "unit": "Wp"
+            },
+            {
+              "label": "Power tolerance",
+              "value": "0 / +5",
+              "unit": "W"
+            },
+            {
+              "label": "Module efficiency",
+              "value": "22.8",
+              "unit": "%"
+            },
+            {
+              "label": "Voltage at max. power (Vmp)",
+              "value": "33.1",
+              "unit": "V"
+            },
+            {
+              "label": "Current at max. power (Imp)",
+              "value": "13.75",
+              "unit": "A"
+            },
+            {
+              "label": "Open-circuit voltage (Voc)",
+              "value": "39.6",
+              "unit": "V"
+            },
+            {
+              "label": "Short-circuit current (Isc)",
+              "value": "14.55",
+              "unit": "A"
+            },
+            {
+              "label": "Temperature coefficient Pmax",
+              "value": "−0.29",
+              "unit": "%/°C"
+            }
+          ]
+        },
+        {
+          "group": "Mechanical",
+          "items": [
+            {
+              "label": "Cell type",
+              "value": "Mono, n-type, 108 half-cells",
+              "unit": ""
+            },
+            {
+              "label": "Dimensions (L × W × H)",
+              "value": "1762 × 1134 × 30",
+              "unit": "mm"
+            },
+            {
+              "label": "Weight",
+              "value": "21.5",
+              "unit": "kg"
+            },
+            {
+              "label": "Front glass",
+              "value": "3.2",
+              "unit": "mm"
+            },
+            {
+              "label": "Frame",
+              "value": "Anodised aluminium, black",
+              "unit": ""
+            },
+            {
+              "label": "Connector cable length",
+              "value": "1200",
+              "unit": "mm"
+            }
+          ]
+        },
+        {
+          "group": "Warranty (manufacturer-stated, demo)",
+          "items": [
+            {
+              "label": "Product warranty",
+              "value": "15",
+              "unit": "years"
+            },
+            {
+              "label": "Linear performance warranty",
+              "value": "30 years to 87.4 %",
+              "unit": ""
+            }
+          ]
+        }
+      ],
+      "compare": {
+        "power_w": 455,
+        "efficiency_pct": 22.8,
+        "length_mm": 1762,
+        "width_mm": 1134,
+        "weight_kg": 21.5,
+        "voc_v": 39.6,
+        "tempco_pct": -0.29
+      },
+      "documents": [
+        {
+          "label": "Datasheet",
+          "format": "PDF",
+          "status": "Sent with quote"
+        },
+        {
+          "label": "Installation manual",
+          "format": "PDF",
+          "status": "Sent with quote"
+        }
+      ],
+      "compatibleWith": [
+        "convert-6",
+        "roof-kit-tile"
+      ]
+    },
+    {
+      "id": "grid-585",
+      "name": "GRID 585",
+      "category": "panel",
+      "keySpec": {
+        "label": "Rated power",
+        "value": 585,
+        "unit": "Wp"
+      },
+      "price": 212,
+      "summary": "Large-format glass-glass bifacial module for commercial roofs and long roof faces.",
+      "description": "GRID 585 is a 2.28 m glass-glass module with a bifacial rear side. It is heavier and longer than the ARC range, so check roof load and handling access with your installer before choosing it.",
+      "suitableFor": [
+        "Installers",
+        "Small commercial"
+      ],
+      "images": [
+        {
+          "src": "img/surface-halfcut.jpg",
+          "alt": "Close-up of a dark solar module with half-cut cells and a white frame edge",
+          "caption": "Half-cut cell layout, macro.",
+          "illustrative": true
+        },
+        {
+          "src": "img/campus-amorbach.jpg",
+          "alt": "Long rows of solar modules on the roofs of a low-rise residential estate",
+          "caption": "Long module rows on low-pitch roofs.",
+          "illustrative": true
+        },
+        {
+          "src": "img/roof-plan-flat.jpg",
+          "alt": "Aerial view of a flat roof with long parallel rows of solar modules",
+          "caption": "Aerial plan of a flat-roof array.",
+          "illustrative": true
+        }
+      ],
+      "specs": [
+        {
+          "group": "Electrical (STC)",
+          "items": [
+            {
+              "label": "Rated power (front)",
+              "value": "585",
+              "unit": "Wp"
+            },
+            {
+              "label": "Power tolerance",
+              "value": "0 / +5",
+              "unit": "W"
+            },
+            {
+              "label": "Module efficiency",
+              "value": "22.6",
+              "unit": "%"
+            },
+            {
+              "label": "Voltage at max. power (Vmp)",
+              "value": "43.4",
+              "unit": "V"
+            },
+            {
+              "label": "Current at max. power (Imp)",
+              "value": "13.48",
+              "unit": "A"
+            },
+            {
+              "label": "Open-circuit voltage (Voc)",
+              "value": "51.9",
+              "unit": "V"
+            },
+            {
+              "label": "Short-circuit current (Isc)",
+              "value": "14.20",
+              "unit": "A"
+            },
+            {
+              "label": "Temperature coefficient Pmax",
+              "value": "−0.29",
+              "unit": "%/°C"
+            },
+            {
+              "label": "Bifaciality",
+              "value": "80 ± 5",
+              "unit": "%"
+            }
+          ]
+        },
+        {
+          "group": "Mechanical",
+          "items": [
+            {
+              "label": "Cell type",
+              "value": "Mono, n-type, 144 half-cells",
+              "unit": ""
+            },
+            {
+              "label": "Dimensions (L × W × H)",
+              "value": "2278 × 1134 × 30",
+              "unit": "mm"
+            },
+            {
+              "label": "Weight",
+              "value": "32.0",
+              "unit": "kg"
+            },
+            {
+              "label": "Glass",
+              "value": "2.0 + 2.0, heat-strengthened",
+              "unit": "mm"
+            },
+            {
+              "label": "Frame",
+              "value": "Anodised aluminium, silver",
+              "unit": ""
+            },
+            {
+              "label": "Connector cable length",
+              "value": "1400",
+              "unit": "mm"
+            }
+          ]
+        },
+        {
+          "group": "Warranty (manufacturer-stated, demo)",
+          "items": [
+            {
+              "label": "Product warranty",
+              "value": "12",
+              "unit": "years"
+            },
+            {
+              "label": "Linear performance warranty",
+              "value": "30 years to 87.4 %",
+              "unit": ""
+            }
+          ]
+        }
+      ],
+      "compare": {
+        "power_w": 585,
+        "efficiency_pct": 22.6,
+        "length_mm": 2278,
+        "width_mm": 1134,
+        "weight_kg": 32.0,
+        "voc_v": 51.9,
+        "tempco_pct": -0.29
+      },
+      "documents": [
+        {
+          "label": "Datasheet",
+          "format": "PDF",
+          "status": "Sent with quote"
+        },
+        {
+          "label": "Installation manual",
+          "format": "PDF",
+          "status": "Sent with quote"
+        },
+        {
+          "label": "Load table for clamping zones",
+          "format": "PDF",
+          "status": "Sent with quote"
+        }
+      ],
+      "compatibleWith": [
+        "convert-6",
+        "roof-kit-tile"
+      ]
+    },
+    {
+      "id": "convert-6",
+      "name": "CONVERT 6",
+      "category": "inverter",
+      "keySpec": {
+        "label": "Rated AC output",
+        "value": 6,
+        "unit": "kW"
+      },
+      "price": 1190,
+      "summary": "Three-phase hybrid inverter with two MPPT inputs and a high-voltage battery port.",
+      "description": "CONVERT 6 handles up to 9 kWp of panels across two roof faces and charges STORE 10 directly. Emergency power needs an additional changeover switch, which your installer specifies.",
+      "suitableFor": [
+        "Homeowners",
+        "Installers",
+        "Small commercial"
+      ],
+      "images": [
+        {
+          "src": "img/utility-room.jpg",
+          "alt": "Wall-mounted inverter above a rack of batteries in a plain utility room",
+          "caption": "Inverter and storage in a utility room.",
+          "illustrative": true
+        },
+        {
+          "src": "img/utility-inverter.jpg",
+          "alt": "Wall-mounted inverter with a small display beside an isolator switch",
+          "caption": "Wall-mounted unit with DC isolator.",
+          "illustrative": true
+        }
+      ],
+      "specs": [
+        {
+          "group": "PV input (DC)",
+          "items": [
+            {
+              "label": "Max. PV array power",
+              "value": "9.0",
+              "unit": "kWp"
+            },
+            {
+              "label": "Max. DC input voltage",
+              "value": "1000",
+              "unit": "V"
+            },
+            {
+              "label": "MPPT voltage range",
+              "value": "160 – 850",
+              "unit": "V"
+            },
+            {
+              "label": "Number of MPPTs / strings",
+              "value": "2 / 1 + 1",
+              "unit": ""
+            },
+            {
+              "label": "Max. input current per MPPT",
+              "value": "16",
+              "unit": "A"
+            }
+          ]
+        },
+        {
+          "group": "Grid output (AC)",
+          "items": [
+            {
+              "label": "Rated AC output",
+              "value": "6.0",
+              "unit": "kW"
+            },
+            {
+              "label": "Grid connection",
+              "value": "3-phase, 400 V, 50 Hz",
+              "unit": ""
+            },
+            {
+              "label": "Max. efficiency",
+              "value": "98.0",
+              "unit": "%"
+            },
+            {
+              "label": "European weighted efficiency",
+              "value": "97.3",
+              "unit": "%"
+            }
+          ]
+        },
+        {
+          "group": "Battery port",
+          "items": [
+            {
+              "label": "Battery type",
+              "value": "Lithium iron phosphate, high voltage",
+              "unit": ""
+            },
+            {
+              "label": "Battery voltage range",
+              "value": "150 – 600",
+              "unit": "V"
+            },
+            {
+              "label": "Max. charge / discharge current",
+              "value": "25",
+              "unit": "A"
+            }
+          ]
+        },
+        {
+          "group": "General",
+          "items": [
+            {
+              "label": "Dimensions (W × H × D)",
+              "value": "520 × 430 × 200",
+              "unit": "mm"
+            },
+            {
+              "label": "Weight",
+              "value": "24.0",
+              "unit": "kg"
+            },
+            {
+              "label": "Ingress protection",
+              "value": "IP65",
+              "unit": ""
+            },
+            {
+              "label": "Operating temperature",
+              "value": "−25 to +60",
+              "unit": "°C"
+            },
+            {
+              "label": "Cooling",
+              "value": "Natural convection",
+              "unit": ""
+            }
+          ]
+        }
+      ],
+      "compare": {
+        "power_kw": 6.0,
+        "max_pv_kwp": 9.0,
+        "mppt": 2,
+        "eff_pct": 98.0,
+        "weight_kg": 24.0
+      },
+      "documents": [
+        {
+          "label": "Datasheet",
+          "format": "PDF",
+          "status": "Sent with quote"
+        },
+        {
+          "label": "Grid-connection documents",
+          "format": "PDF",
+          "status": "Requested from vendor per order"
+        }
+      ],
+      "compatibleWith": [
+        "arc-430",
+        "arc-455",
+        "grid-585",
+        "store-10"
+      ]
+    },
+    {
+      "id": "store-10",
+      "name": "STORE 10",
+      "category": "storage",
+      "keySpec": {
+        "label": "Usable capacity",
+        "value": 9.6,
+        "unit": "kWh"
+      },
+      "price": 4390,
+      "summary": "Stackable LFP battery, four modules, 9.6 kWh usable (demo figure).",
+      "description": "STORE 10 stacks four 2.56 kWh modules on a floor base. It is designed for CONVERT 6 and can be extended to six modules later. The usable capacity is a demo figure and should be confirmed against the vendor datasheet.",
+      "suitableFor": [
+        "Homeowners",
+        "Small commercial"
+      ],
+      "images": [
+        {
+          "src": "img/utility-battery.jpg",
+          "alt": "Rack of battery modules with wiring on a metal stand in a utility room",
+          "caption": "Battery modules on a floor rack.",
+          "illustrative": true
+        },
+        {
+          "src": "img/utility-room.jpg",
+          "alt": "Wall-mounted inverter above a rack of batteries in a plain utility room",
+          "caption": "Storage beside the inverter.",
+          "illustrative": true
+        }
+      ],
+      "specs": [
+        {
+          "group": "Capacity",
+          "items": [
+            {
+              "label": "Usable capacity (demo)",
+              "value": "9.6",
+              "unit": "kWh"
+            },
+            {
+              "label": "Nominal capacity",
+              "value": "10.24",
+              "unit": "kWh"
+            },
+            {
+              "label": "Modules",
+              "value": "4 × 2.56",
+              "unit": "kWh"
+            },
+            {
+              "label": "Expandable to",
+              "value": "6 modules, 14.4 usable",
+              "unit": "kWh"
+            }
+          ]
+        },
+        {
+          "group": "Electrical",
+          "items": [
+            {
+              "label": "Cell chemistry",
+              "value": "Lithium iron phosphate (LFP)",
+              "unit": ""
+            },
+            {
+              "label": "Nominal voltage",
+              "value": "204.8",
+              "unit": "V"
+            },
+            {
+              "label": "Max. continuous charge / discharge",
+              "value": "5.0",
+              "unit": "kW"
+            },
+            {
+              "label": "Round-trip efficiency (demo)",
+              "value": "95",
+              "unit": "%"
+            }
+          ]
+        },
+        {
+          "group": "General",
+          "items": [
+            {
+              "label": "Dimensions (W × D × H)",
+              "value": "600 × 200 × 1200",
+              "unit": "mm"
+            },
+            {
+              "label": "Weight",
+              "value": "118",
+              "unit": "kg"
+            },
+            {
+              "label": "Ingress protection",
+              "value": "IP55",
+              "unit": ""
+            },
+            {
+              "label": "Charging temperature",
+              "value": "0 to +50",
+              "unit": "°C"
+            },
+            {
+              "label": "Installation",
+              "value": "Indoor, floor-standing",
+              "unit": ""
+            }
+          ]
+        },
+        {
+          "group": "Warranty (manufacturer-stated, demo)",
+          "items": [
+            {
+              "label": "Product warranty",
+              "value": "10",
+              "unit": "years"
+            }
+          ]
+        }
+      ],
+      "compare": {
+        "usable_kwh": 9.6,
+        "power_kw": 5.0,
+        "weight_kg": 118
+      },
+      "documents": [
+        {
+          "label": "Datasheet",
+          "format": "PDF",
+          "status": "Sent with quote"
+        },
+        {
+          "label": "Safety data sheet",
+          "format": "PDF",
+          "status": "Requested from vendor per order"
+        }
+      ],
+      "compatibleWith": [
+        "convert-6"
+      ]
+    },
+    {
+      "id": "roof-kit-tile",
+      "name": "ROOF KIT / TILE",
+      "category": "mounting",
+      "keySpec": {
+        "label": "Roof type",
+        "value": "Tile roofs",
+        "unit": ""
+      },
+      "keyNumeric": 6,
+      "price": 340,
+      "summary": "Hooks, rails and clamps for one row of six framed modules on a clay or concrete tile roof.",
+      "description": "One kit fixes six modules in portrait in a single row. Order one kit per six modules per row. Hook spacing and rafter fixing must follow a static calculation done for your roof by the installer.",
+      "suitableFor": [
+        "Installers",
+        "Homeowners"
+      ],
+      "images": [
+        {
+          "src": "img/mount-tile-roof.jpg",
+          "alt": "Solar modules fixed on rails above a clay tile roof",
+          "caption": "Rails and modules above clay tiles.",
+          "illustrative": true
+        },
+        {
+          "src": "img/crew-cleaning.jpg",
+          "alt": "Worker on a lift platform working on a large solar array on a tiled roof",
+          "caption": "Roof work from a lift platform.",
+          "illustrative": true
+        }
+      ],
+      "specs": [
+        {
+          "group": "Kit contents",
+          "items": [
+            {
+              "label": "Roof hooks, adjustable",
+              "value": "12",
+              "unit": "pcs"
+            },
+            {
+              "label": "Mounting rail 40 × 40, 3.5 m",
+              "value": "4",
+              "unit": "pcs"
+            },
+            {
+              "label": "Rail connectors",
+              "value": "2",
+              "unit": "pcs"
+            },
+            {
+              "label": "Middle clamps",
+              "value": "10",
+              "unit": "pcs"
+            },
+            {
+              "label": "End clamps",
+              "value": "4",
+              "unit": "pcs"
+            },
+            {
+              "label": "Fixing screws and T-bolts",
+              "value": "1",
+              "unit": "set"
+            }
+          ]
+        },
+        {
+          "group": "Compatibility",
+          "items": [
+            {
+              "label": "Roof covering",
+              "value": "Clay and concrete interlocking tiles",
+              "unit": ""
+            },
+            {
+              "label": "Module frame height",
+              "value": "30 – 40",
+              "unit": "mm"
+            },
+            {
+              "label": "Modules per kit",
+              "value": "6, portrait, one row",
+              "unit": ""
+            }
+          ]
+        },
+        {
+          "group": "Materials",
+          "items": [
+            {
+              "label": "Hooks and fasteners",
+              "value": "Stainless steel A2",
+              "unit": ""
+            },
+            {
+              "label": "Rails and clamps",
+              "value": "Aluminium EN AW-6063 T6",
+              "unit": ""
+            },
+            {
+              "label": "Kit weight",
+              "value": "28",
+              "unit": "kg"
+            }
+          ]
+        }
+      ],
+      "compare": {
+        "modules_per_kit": 6,
+        "weight_kg": 28
+      },
+      "documents": [
+        {
+          "label": "Assembly instructions",
+          "format": "PDF",
+          "status": "Sent with quote"
+        }
+      ],
+      "compatibleWith": [
+        "arc-430",
+        "arc-455",
+        "grid-585"
+      ]
+    }
+  ],
+  "compareFields": {
+    "panel": [
+      {
+        "key": "power_w",
+        "label": "Rated power",
+        "unit": "Wp",
+        "better": "high"
+      },
+      {
+        "key": "efficiency_pct",
+        "label": "Efficiency",
+        "unit": "%",
+        "better": "high"
+      },
+      {
+        "key": "length_mm",
+        "label": "Length",
+        "unit": "mm"
+      },
+      {
+        "key": "width_mm",
+        "label": "Width",
+        "unit": "mm"
+      },
+      {
+        "key": "weight_kg",
+        "label": "Weight",
+        "unit": "kg",
+        "better": "low"
+      },
+      {
+        "key": "voc_v",
+        "label": "Voc",
+        "unit": "V"
+      },
+      {
+        "key": "tempco_pct",
+        "label": "Temp. coeff. Pmax",
+        "unit": "%/°C",
+        "better": "high"
+      }
+    ],
+    "inverter": [
+      {
+        "key": "power_kw",
+        "label": "Rated AC output",
+        "unit": "kW"
+      },
+      {
+        "key": "max_pv_kwp",
+        "label": "Max. PV array",
+        "unit": "kWp"
+      },
+      {
+        "key": "mppt",
+        "label": "MPPTs",
+        "unit": ""
+      },
+      {
+        "key": "eff_pct",
+        "label": "Max. efficiency",
+        "unit": "%"
+      },
+      {
+        "key": "weight_kg",
+        "label": "Weight",
+        "unit": "kg"
+      }
+    ],
+    "storage": [
+      {
+        "key": "usable_kwh",
+        "label": "Usable capacity",
+        "unit": "kWh"
+      },
+      {
+        "key": "power_kw",
+        "label": "Max. power",
+        "unit": "kW"
+      },
+      {
+        "key": "weight_kg",
+        "label": "Weight",
+        "unit": "kg"
+      }
+    ],
+    "mounting": [
+      {
+        "key": "modules_per_kit",
+        "label": "Modules per kit",
+        "unit": ""
+      },
+      {
+        "key": "weight_kg",
+        "label": "Kit weight",
+        "unit": "kg"
+      }
+    ]
+  },
+  "process": [
+    {
+      "step": 1,
+      "title": "Tell us about the roof",
+      "body": "Send roof dimensions, location, roof covering and a rough power goal, or build a cart if you already know what you want.",
+      "caveat": "We suggest equipment from the catalog. That is not a system design: string layout, roof load and grid registration are checked by your installer."
+    },
+    {
+      "step": 2,
+      "title": "Confirm the list",
+      "body": "You get a written equipment list with prices and the lead time for each item. Nothing is ordered until you confirm it.",
+      "caveat": "Prices can change between quote and confirmation if a vendor changes theirs. The quote states how long it is held."
+    },
+    {
+      "step": 3,
+      "title": "We source it",
+      "body": "After confirmation we order each item from its vendor and arrange delivery to your address or your installer's.",
+      "caveat": "We hold no stock. Lead times depend on the vendor and are confirmed per order, not promised up front."
+    },
+    {
+      "step": 4,
+      "title": "A qualified installer fits it",
+      "body": "Installation is done by an independent, qualified installer you appoint. We send them the datasheets and manuals for the delivered equipment.",
+      "caveat": "SOLARFIELD does not install, commission or register systems, and does not employ installers."
+    }
+  ],
+  "caseStudies": [
+    {
+      "id": "terraced-house",
+      "fictional": true,
+      "title": "A south-west roof on a terraced house",
+      "place": "Illustrative location: Baden-Württemberg",
+      "customerType": "Homeowner",
+      "image": "img/house-brick-mainz.jpg",
+      "imageNote": "Photograph shows a different house and is used for illustration only.",
+      "brief": "A two-storey terraced house with a 38° south-west roof face and a smaller north-east face. Clay tiles, one chimney, and a heat pump planned for next year.",
+      "roof": {
+        "face": "South-west, 38°",
+        "usable": "10.4 × 5.7 m",
+        "covering": "Clay interlocking tiles"
+      },
+      "goal": "Cover daytime use and charge a battery for evenings.",
+      "decisions": [
+        "ARC 430 rather than ARC 455: three rows of the 1722 mm module fit the 5.7 m face with edge clearance; the longer module would only fit two.",
+        "20 modules in rows of 8, 8 and 4, leaving space around the chimney. One mounting kit per six modules in a row gives five kits.",
+        "One CONVERT 6. Twenty modules come to 8.6 kWp, inside its 9.0 kWp input limit.",
+        "One STORE 10, with room to add two modules once the heat pump is in."
+      ],
+      "equipment": [
+        {
+          "id": "arc-430",
+          "qty": 20
+        },
+        {
+          "id": "convert-6",
+          "qty": 1
+        },
+        {
+          "id": "store-10",
+          "qty": 1
+        },
+        {
+          "id": "roof-kit-tile",
+          "qty": 5
+        }
+      ],
+      "installerNote": "The installer did the rafter check, the string layout and the grid registration.",
+      "notMeasured": "This is a constructed example. No yield or savings figures are given because none were measured."
+    },
+    {
+      "id": "joinery-workshop",
+      "fictional": true,
+      "title": "An east-west workshop roof for a small joinery",
+      "place": "Illustrative location: Lower Saxony",
+      "customerType": "Small commercial",
+      "image": "img/school-north-germany.jpg",
+      "imageNote": "Photograph shows a different building and is used for illustration only.",
+      "brief": "A single-storey workshop with an east-west gable roof covered in concrete tiles. Machines run between 7:00 and 16:00 on weekdays.",
+      "roof": {
+        "face": "East and west, 22°",
+        "usable": "2 × 18.0 × 6.5 m",
+        "covering": "Concrete tiles"
+      },
+      "goal": "Match the daytime machine load, plus some storage for the dust extraction run-down after hours.",
+      "decisions": [
+        "GRID 585, because the 6.5 m faces take two rows of the 2.28 m module in portrait, and fewer modules mean fewer roof fixings.",
+        "Four rows of eight modules, two on each face. Two kits per row of eight gives eight kits.",
+        "Three CONVERT 6 units. 32 modules (18.7 kWp) split into three arrays, each under 9.0 kWp.",
+        "Two STORE 10 units, sized to the evening extraction load rather than full overnight use."
+      ],
+      "equipment": [
+        {
+          "id": "grid-585",
+          "qty": 32
+        },
+        {
+          "id": "convert-6",
+          "qty": 3
+        },
+        {
+          "id": "store-10",
+          "qty": 2
+        },
+        {
+          "id": "roof-kit-tile",
+          "qty": 8
+        }
+      ],
+      "installerNote": "The installer's structural engineer confirmed roof load for the heavier glass-glass modules before the order was placed.",
+      "notMeasured": "This is a constructed example. No yield or savings figures are given because none were measured."
+    }
+  ],
+  "enquiry": {
+    "intro": "Send us the dimensions, location and rough power goal. We'll help you narrow down the equipment.",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Name",
+        "type": "text",
+        "required": true,
+        "autocomplete": "name"
+      },
+      {
+        "name": "email",
+        "label": "Email",
+        "type": "email",
+        "required": true,
+        "autocomplete": "email"
+      },
+      {
+        "name": "phone",
+        "label": "Phone",
+        "type": "tel",
+        "required": false,
+        "autocomplete": "tel",
+        "hint": "Optional. Only if you'd rather talk it through."
+      },
+      {
+        "name": "customerType",
+        "label": "You are",
+        "type": "radio",
+        "required": true,
+        "options": [
+          "Homeowner",
+          "Installer",
+          "Small commercial"
+        ]
+      },
+      {
+        "name": "postcode",
+        "label": "Postcode of the site",
+        "type": "text",
+        "required": true,
+        "pattern": "[0-9]{5}",
+        "hint": "Five digits. Used for delivery and roof-load zone only.",
+        "autocomplete": "postal-code"
+      },
+      {
+        "name": "roofLength",
+        "label": "Roof face length",
+        "type": "number",
+        "unit": "m",
+        "required": false,
+        "step": "0.1",
+        "min": "1"
+      },
+      {
+        "name": "roofWidth",
+        "label": "Roof face height (eaves to ridge)",
+        "type": "number",
+        "unit": "m",
+        "required": false,
+        "step": "0.1",
+        "min": "1"
+      },
+      {
+        "name": "roofType",
+        "label": "Roof covering",
+        "type": "select",
+        "required": true,
+        "options": [
+          "Clay tiles",
+          "Concrete tiles",
+          "Metal sheet",
+          "Flat roof",
+          "Not sure"
+        ]
+      },
+      {
+        "name": "orientation",
+        "label": "Roof faces",
+        "type": "select",
+        "required": false,
+        "options": [
+          "South",
+          "South-east",
+          "South-west",
+          "East-west",
+          "Not sure"
+        ]
+      },
+      {
+        "name": "powerGoal",
+        "label": "Rough power goal",
+        "type": "number",
+        "unit": "kWp",
+        "required": false,
+        "step": "0.1",
+        "min": "0.5",
+        "hint": "A guess is fine. Leave blank if you don't know."
+      },
+      {
+        "name": "storage",
+        "label": "Interested in storage?",
+        "type": "radio",
+        "required": false,
+        "options": [
+          "Yes",
+          "No",
+          "Not sure"
+        ]
+      },
+      {
+        "name": "products",
+        "label": "Products you're considering",
+        "type": "products",
+        "required": false
+      },
+      {
+        "name": "message",
+        "label": "Anything else",
+        "type": "textarea",
+        "required": false
+      },
+      {
+        "name": "consent",
+        "label": "I agree that SOLARFIELD may use these details to reply to this enquiry.",
+        "type": "checkbox",
+        "required": true
+      }
+    ],
+    "success": {
+      "title": "Enquiry received",
+      "body": "We'll reply by email with a suggested equipment list. In this demo nothing is sent: your enquiry is stored in this browser only."
+    }
+  },
+  "acceptanceTests": [
+    "Signed out, no price appears anywhere: catalog, product detail, comparison, home table.",
+    "Signed out, 'Add to cart' becomes 'Sign in to see price' and leads to sign-in, returning to the same product.",
+    "After mock sign-in, prices appear on every listing and detail view, read from this file.",
+    "Catalog search matches name, category and summary; category filter and sort update the list and URL.",
+    "Sorting by price is unavailable when signed out and says why.",
+    "Comparison reads values from compareFields and products[].compare and only compares within one category.",
+    "Quote request works without sign-in and shows a success confirmation.",
+    "Cart quantities update the subtotal; removing the last item shows an empty state with a route back to equipment.",
+    "Checkout places a simulated order with a demo reference, takes no payment details, and clears the cart.",
+    "Both case studies are labelled fictional on the listing and inside the study.",
+    "Layouts hold at 390, 768 and 1440 px without horizontal page scroll."
+  ],
+  "photoCredits": [
+    {
+      "file": "img/roof-plan-flat.jpg",
+      "title": "Dornbirn-Montfortstraße 21-01ASD",
+      "author": "Asurnipal",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dornbirn-Montfortstra%C3%9Fe_21-01ASD.jpg"
+    },
+    {
+      "file": "img/roof-plan-street.jpg",
+      "title": "Suburban rooftop solar power generation in Canberra, Australia (part 3)",
+      "author": "Benlisquare",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Suburban_rooftop_solar_power_generation_in_Canberra,_Australia_(part_3).jpg"
+    },
+    {
+      "file": "img/house-brick-mainz.jpg",
+      "title": "Mainz - Ziegelhaus an der Frankenhöhe",
+      "author": "ManuelB701",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mainz_-_Ziegelhaus_an_der_Frankenh%C3%B6he.jpg"
+    },
+    {
+      "file": "img/house-zero-energy.jpg",
+      "title": "Nullenergiehaus ArM",
+      "author": "Ludwig Gebauer",
+      "license": "CC BY-SA 2.0 DE",
+      "source": "https://commons.wikimedia.org/wiki/File:Nullenergiehaus_ArM.jpg"
+    },
+    {
+      "file": "img/surface-mono-black.jpg",
+      "title": "Krashefski 000254 172805 517922 4578",
+      "author": "Paul Krashefski, U.S. Department of Energy",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Krashefski_000254_172805_517922_4578_(36963530515).jpg"
+    },
+    {
+      "file": "img/surface-halfcut.jpg",
+      "title": "Vermont Law School Solar Panel Array-2",
+      "author": "SayCheeeeeese",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vermont_Law_School_Solar_Panel_Array-2.JPG"
+    },
+    {
+      "file": "img/surface-poly.jpg",
+      "title": "Close-up of a polycrystalline solar PV panel",
+      "author": "Guilhem Vellut",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Close-up_of_a_polycrystalline_solar_PV_panel.jpg"
+    },
+    {
+      "file": "img/panel-edge-sky.jpg",
+      "title": "Solar panels and sky - Smaack - 201206",
+      "author": "Smaack",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Solar_panels_and_sky_-_Smaack_-_201206.jpg"
+    },
+    {
+      "file": "img/mount-tile-roof.jpg",
+      "title": "Rooftop solar photovoltaic installation",
+      "author": "Marta Victoria",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rooftop_solar_photovoltaic_installation.jpg"
+    },
+    {
+      "file": "img/mount-tile-chimney.jpg",
+      "title": "Solar panels and satellite dish and chimney - Smaack - 201206",
+      "author": "Smaack",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Solar_panels_and_satellite_dish_and_chimney_-_Smaack_-_201206.jpg"
+    },
+    {
+      "file": "img/crew-cleaning.jpg",
+      "title": "Reinigung Photovoltaik",
+      "author": "Stefan Krug",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Reinigung_Photovoltaik.jpg"
+    },
+    {
+      "file": "img/utility-room.jpg",
+      "title": "Solar Installation in Kenya",
+      "author": "PowerAfricaSolar",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Solar_Installation_in_Kenya.jpg",
+      "note": "Also cropped as img/utility-inverter.jpg and img/utility-battery.jpg."
+    },
+    {
+      "file": "img/campus-amorbach.jpg",
+      "title": "NSU-Amorbach SolarProjekt02",
+      "author": "Joachim Köhler",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:NSU-Amorbach_SolarProjekt02.JPG"
+    },
+    {
+      "file": "img/school-north-germany.jpg",
+      "title": "Building with solar panels Northern Germany",
+      "author": "Tvabutzku1234",
+      "license": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Building_with_solar_panels_Northern_Germany.jpg"
+    }
+  ]
+}
