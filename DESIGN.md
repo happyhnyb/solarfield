@@ -1,84 +1,117 @@
-# SOLARFIELD — design notes
+# SOLARFIELD — design notes (remake, Oct 2026)
 
-Good energy. No guesswork. A German reseller of panels, hybrid inverters, storage and tile-roof mounting. It sources from vendors after an order, and third parties install. Customers are homeowners, installers and small commercial buyers. Prices stay locked until (mock) sign-in.
+Good energy. No guesswork. SOLARFIELD is a German reseller of panels, hybrid inverters, storage and tile-roof mounting. It buys from vendors after an order, and third parties install. Customers are homeowners, installers and small commercial buyers. Prices stay hidden until a (mock) sign-in. All data is fictional demo data, and the footer says so.
 
-The page's one job: help someone with a roof get from "what do I need?" to an equipment list, either as a demo order or as a quote request.
+**The page's one job:** get someone with a roof from "what do I need?" to an equipment list, either as a demo order or as a quote request.
 
-## Fixed by the brief (not negotiable)
+## Why the remake
+The first build (the "survey plate") had a chalk paper ground (#F4F1E9 / #FAF8F3), mono values everywhere, black hairline ledgers, square 1px buttons and a dark form band before the footer. The design-system MCP linter called it **"looks retro"**, and it matches the *Stark ledger* combination one for one. The remake keeps the brand and replaces that execution.
 
-| Token | Value | Role |
+## Brand elements kept
+- The **SOLARFIELD** wide wordmark in Archivo at width 125.
+- The **ink #1C2220** and **copper #CD6541** pair. Copper stays the signal colour.
+- The **dimension-line motif**: copper measurement lines over a roof. It used to be decoration on a photo; it is now the working signature.
+- All copy, data, flows, the price gate and the demo labelling.
+
+## Content inventory (home)
+1. **Hero and roof planner.** "Your roof. A smarter use of space." / "Panels, storage and system essentials, selected for projects that need to work long after installation day." / [Explore equipment] [Tell us about your project]. Planner: "Fit panels to one roof face". Inputs: face length (m), eaves to ridge (m), and a choice of ARC 430, ARC 455 or GRID 585. Readout: modules, kWp, rows × columns. Action: [Send this roof with an enquiry]. Note: "Portrait layout with 0,2 m edge clearance. It ignores chimneys, vents and fire-code margins; your installer decides the real number."
+2. **Aerial band.** "A flat roof in Dornbirn, measured from the air". The existing aerial photo with its copper dimension overlay (≈ 21 m, ≈ 24 m, 5 module rows, second face). Credit: Asurnipal, CC BY-SA 4.0.
+3. **Categories.** "Four kinds of equipment". Solar panels 430–585 Wp, Hybrid inverters 6 kW, Storage 9,6 kWh, Mounting for tile roofs. Each has a photo, a summary and a product count, all from the JSON.
+4. **Panel comparison.** "Three panels, compared on the numbers". Rated power, efficiency, size, weight and price (behind the lock).
+5. **Product spread.** ROOF KIT / TILE on clay tiles, and CONVERT 6 + STORE 10 on a utility-room wall.
+6. **Process.** "From order to roof". Four stages, each with its caveat.
+7. **CTA band.** "Send us your roof's dimensions" / [Start an enquiry] [Use the roof planner].
+
+## Direction
+| Axis | Choice | Subject-world source |
 |---|---|---|
-| `--chalk` | `#F4F1E9` | page ground |
-| `--ink` | `#1C2220` | text, rules, dark plates |
-| `--copper` | `#CD6541` | signal only: measurement lines, focus, active state, prices once unlocked |
-| `--stone` | `#C5C7BF` | secondary rules, swatch mats, disabled |
-| `--ink-2` | `#4A524F` | secondary text (ink mixed toward stone; no new hue) |
-| `--chalk-2` | `#EAE6DB` | recessed panels (chalk one step darker) |
+| Layout grammar | **Tool-first** (the hero *is* the roof planner), then a plan view, then a mixed catalogue | an installer's roof layout sketch: face, edge margins, module grid |
+| Ground | **White #FFFFFF**, a cool mist #F2F3EF panel for the table, one **ink** panel (planner), one full-bleed **copper** band | — |
+| Type genre | **Wide grotesk** display (Archivo, wdth 112–125) + Instrument Sans text. **No mono**: numbers use Archivo tabular figures | datasheet headline numerals |
+| Density | Medium; packed only inside the table | — |
+| Imagery | Real Commons photography at full colour, plus a live SVG layout drawing | — |
+| Signature | **The roof planner**: type the face size and a module grid tiles into it, with copper dimension lines that redraw to your numbers | the dimension-line motif made real |
 
-Type: **Archivo** for display (its width axis is used: 112–125 for headlines, 75–87 for spec numerals); **Instrument Sans** for body; **IBM Plex Mono** for specification values *only*, never for decoration.
+Losing directions:
+- **B. Poster fields**, a copper full-bleed field per section with huge numerals. It lost because Lido, the most recent taste-log entry, is already a poster/colour-field site, and it buries the catalog.
+- **C. Night operations**, an ink ground with copper data like an energy monitor. It lost because a dark ground reads as a dashboard, not as a shop for homeowners, and it would turn the photography moody.
 
-## Three art directions
+Taste-log check: the layout (tool-first) and ground (white with ink and copper planes) differ from Toolshed, Avara rev 2 and Lido. The type genre (wide grotesk) is kept for **brand retention**, which overrides the rotation rule.
 
-### A. Survey plate (recommended)
-The site behaves like a **surveyor's plate set**: every page opens with a photograph treated as a drawing, with copper dimension lines, angle marks and mono annotations laid over real roof photography. The catalog is a **ledger** (hairline-ruled index rows with a square material swatch), not a card grid. Products are "plates" with numbered spec tables.
-- Type: Archivo 125-width black for headlines, set tight (−0.035em) and big (clamp 56→168px). Instrument Sans 17px body at 62ch. Plex Mono 13px for values and units.
-- Composition: 12 columns. Headlines span 1–8 and body copy sits in 9–12 (asymmetric). Photography goes full-bleed or 7/12, never centred.
-- Imagery: aerial plan views (a roof seen as a drawing), macro panel surfaces used as material swatches, documentary maintenance and utility-room shots. A single grade: −15% saturation and a slight lift toward chalk, so amateur Commons photos read as one set.
-- The bold move: **the measurement overlay**. The hero aerial roof carries live SVG dimension lines and the end CTA asks for those same dimensions. "Your roof. A smarter use of space." and "Send us the dimensions" become one idea you can see.
+## Palette
+| Token | Hex | Role |
+|---|---|---|
+| `--ground` | #FFFFFF | page |
+| `--ink` | #1C2220 | text, planner panel, primary buttons, footer |
+| `--ink-2` | #4A524F | secondary text (8.2:1 on white, 7.2:1 on mist) |
+| `--copper` | #CD6541 | signal: dimension lines, focus ring, active chip, CTA band fill |
+| `--copper-ink` | #A94A28 | copper text on white (5.7:1) |
+| `--copper-lite` | #E2855F | copper text on ink (6.0:1) |
+| `--on-copper` | #121614 | text on the copper band (4.8:1) |
+| `--mist` | #F2F3EF | recessed panels, table panel, image backdrops |
+| `--line` | #DCDFD8 | rules and borders |
+| `--ink-soft` | #A3AAA6 | secondary text on ink (6.8:1) |
 
-### B. Datasheet
-Swiss technical datasheet. Almost no photography above the fold. Huge Archivo condensed numerals (430 / 455 / 585 Wp) act as the hero, the whole site is tables, and photos are small 4:5 plates in the margin.
-- Strong for installers, cold for homeowners. The brief asks for "substantial photography", so it fails that test.
+## Type
+- Display: **Archivo**, wdth 112, weight 800, −0.035em. H1 is clamp(44, 5.6vw, 84). H2 is wdth 108, weight 750, clamp(32, 3.4vw, 52). H3 is wdth 100, weight 650, 22.
+- Numbers: Archivo wdth 100, weight 700, tabular. The readout is 56 and table values are 17.
+- Text: **Instrument Sans**, 17/1.6. Small is 14. Labels are 14/600 in sentence case.
 
-### C. Monograph
-An architecture monograph: full-bleed photo spreads alternating with narrow captioned text columns, slow scroll, page numbers, products as tipped-in plates.
-- Beautiful, but it buries the catalog and turns pricing and cart into an afterthought. Too slow for a procurement tool.
-
-**Chosen: A.** It is the only one where the art direction *is* the product promise (measure the roof, then choose equipment by specification) rather than a skin over it.
-
-## Default-check (would I produce this for any solar brief?)
-- Cream + copper is the #1 current AI default. The brief pins it, so it stays. Countermeasures: grotesque display (no serif), copper used only as a *signal* (lines, focus, unlocked price), and never as a decorative fill or button wash.
-- Hairline rules and mono labels are also defaults. The brief asks for rules, so they carry structure (ledger rows, spec tables) and nothing else. Mono appears only on real values with units.
-- Generic eco tells are banned: no leaves, suns, gradients, glass, badges or stat counters. There are no "3 cards" anywhere: categories are a ledger, panels are a comparison table, process is a ruled sequence, case studies are two different spreads.
-- Eyebrows: only the one the brief supplies. Other headings stand alone.
-- Buttons are named by their action ("Add to cart", "Sign in to see price", "Send enquiry"). No arrows appended.
-
-## Layout sketches
-
-Home, 1440:
+## Wireframes
 ```
-SOLARFIELD   Equipment Projects How it works About Contact     Sign in  Cart (0)
-───────────────────────────────────────────────────────────────────────────────
-RESIDENTIAL + COMMERCIAL SOLAR EQUIPMENT
-Your roof.                                         │ Panels, storage and …
-A smarter use of space.                            │ [Explore equipment] Tell us…
-┌──────────────────────── aerial roof, full bleed ───────────────────────────┐
-│   ├──── 14.2 m ────┤  copper dimension lines + mono labels, 6 rows ↔        │
+1440
+[demo strip — ink]
+SOLARFIELD  Equipment Projects How it works About Contact        Sign in  Cart 0
+──────────────────────────────────────────────────────────────────────────────
+Your roof.                         ┌──────── ink planner, r20 ──────────────┐
+A smarter use                      │ Fit panels to one roof face            │
+of space.                          │  ridge                                 │
+Panels, storage and …              │ ┌─[▮▮▮▮▮▮▮▮]──────┐ 5,7 m             │
+[Explore equipment] [Tell us…]     │ │ [▮▮▮▮▮▮▮▮]      │                    │
+                                   │ └─────────────────┘                    │
+                                   │  ├──── 10,4 m ────┤  eaves             │
+                                   │ [len m][height m]  (ARC430|455|GRID585)│
+                                   │ 24 modules │ 10,3 kWp │ 3 rows of 8     │
+                                   │ [Send this roof with an enquiry]       │
+                                   └────────────────────────────────────────┘
+┌──────────────────── aerial photo, full bleed, copper overlay ──────────────┐
 └────────────────────────────────────────────────────────────────────────────┘
-caption, photo credit
-───────────────────────────────────────────────────────────────────────────────
-Solar panels      | text                         | 430–585 Wp    | [swatch]
-Hybrid inverters  | text                         | 6 kW          | [swatch]
-Storage           | …                                             (ledger)
-Mounting          | …
-───────────────────────────────────────────────────────────────────────────────
-Less noise.        │  live spec table: ARC 430 / ARC 455 / GRID 585 (from JSON)
-Better decisions.  │  Wp, η, size, weight, price or lock
-[ macro surface photo 7/12 ]        [ CONVERT 6 + STORE 10 plate 5/12 ]
-───────────────────────────────────────────────────────────────────────────────
-1 Request ── 2 Confirm ── 3 Sourcing ── 4 Installer    (caveat under each)
-───────────────────────────────────────────────────────────────────────────────
-Have a roof in mind?        length [   ] m  width [   ] m  postcode [    ]
-                            goal [   ] kWp      [Start an enquiry]
+Four kinds of equipment
+[photo 4:5][photo][photo][photo]   name / big range number / summary / count
+┌── mist panel r20 ─────────────────────────────────────────────────────────┐
+│ Three panels, compared      │  table: ARC 430 | ARC 455 | GRID 585         │
+└───────────────────────────────────────────────────────────────────────────┘
+[ tile-roof photo 7/12 + kit card ]      [ utility room 5/12 + 2 product cards ]
+From order to roof:  ●────●────●────●   copper track, 4 stages
+███████ copper band: Send us your roof's dimensions  [Start an enquiry] ██████
+footer (ink)
+
+390
+Headline 44px, lede, two buttons stacked
+Planner full width (16px gutter, r16): drawing, two inputs side by side,
+chips scroll in one row, readout in three cells, full-width button
+Aerial photo 4:3, overlay kept
+Categories: 2 × 2 grid
+Table scrolls inside its panel with a sticky first column
+Process: vertical copper track on the left
 ```
-
-Mobile, 390: one column. The headline still dominates at 56px. The hero photo is cropped square with the overlay kept, ledger rows stack (name, then range and swatch on one line), and tables scroll horizontally inside a bordered frame with the first column sticky.
-
-## Motion policy
-- One orchestrated moment: on home load the dimension lines draw in (stroke-dashoffset, 900ms, staggered). With reduced motion they are drawn instantly.
-- Feedback only otherwise: cart count ticks, the price lock "opens" (lock row swaps to price with a 160ms fade), the form success state replaces the form. No scroll-triggered fades.
 
 ## Radius, weight, spacing
-- Radius 0 on plates, tables and photos; 2px on inputs and buttons. Pills are only for filter chips, where a pill means "toggle".
-- Spacing scale (4px base): 4 8 12 16 24 32 48 72 112 160.
-- Rules: 1px ink at 100% for section breaks, 1px stone for in-table rows.
+- Radius follows a hierarchy: **6** for controls and buttons, **12** for photos and cards, **20** for big panels (planner, table, CTA). Chips are pills, because a pill means "one of these".
+- Borders are 1px `--line`. Ink rules are never used for structure.
+- Spacing is on a 4px base: 4 8 12 16 24 32 48 72 112.
+
+## Motion
+- **One orchestrated moment:** on load the planner's dimension lines draw in (500ms) and the modules tile in row by row (staggered 18ms each). The aerial overlay draws once, at the same time.
+- Feedback: the readout updates on input, the module grid re-tiles without delay, and the cart count ticks. There are no scroll reveals. Reduced motion shows everything immediately.
+
+## Signature move
+The roof planner. The copper dimension lines that used to sit only on a photo now measure *your* roof: the face is drawn to scale, the module grid packs portrait with 0,2 m clearance (via `fit.js`, the same function the enquiry page uses), and one button carries length, height and panel choice to the enquiry form.
+
+## Default-check
+- **Autopilot** would be a centred hero over a sunny stock photo, a 3-card "why solar" grid, a stat counter and a green gradient. None of these are here.
+- **The anti-slop autopilot** is what the first build was: a chalk paper ground, mono everywhere, black hairline ledgers and a dark form band. It is replaced by a white ground, tabular sans numerals, soft panels with a radius hierarchy and a copper CTA band.
+- The closest saturated combination is still *Stark ledger*. Three things separate this build from it: the ground is white with colour planes, not flat grey; there is no mono and no hairline tables; and the tool-first hero has rounded panels instead of a giant headline over a table.
+
+## Lint exceptions
+- The H1 "Your roof. A smarter use of space." is the brand line from the original brief, kept verbatim for brand retention. Its full stops are deliberate.

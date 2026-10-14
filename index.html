@@ -8,86 +8,122 @@
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <main id="main">
   <section class="hero">
-    <div class="wrap">
-      <div class="grid hero-copy">
-        <p class="eyebrow">Residential + commercial solar equipment</p>
-        <h1 class="display"><span>Your roof.</span><span>A smarter use of space.</span></h1>
-        <div class="hero-side">
-          <p class="lede">Panels, storage and system essentials, selected for projects that need to work long after installation day.</p>
-          <div class="cta-row">
-            <a class="btn" href="equipment.html">Explore equipment</a>
-            <a class="btn btn--line" href="contact.html">Tell us about your project</a>
-          </div>
+    <div class="wrap grid hero-grid">
+      <div class="hero-copy">
+        <p class="kicker">Solar equipment for German roofs</p>
+        <h1 class="display"><span>Your roof.</span> <span>A smarter use of space.</span></h1>
+        <p class="lede">Panels, storage and system essentials, selected for projects that need to work long after installation day.</p>
+        <div class="cta-row">
+          <a class="btn" href="equipment.html">Explore equipment</a>
+          <a class="btn btn--line" href="contact.html">Tell us about your project</a>
         </div>
       </div>
 
-      <figure class="plate">
-        <div class="plate-frame">
-          <img class="photo" src="img/roof-plan-flat.jpg" alt="Aerial view of a flat roof with long parallel rows of solar modules next to a pitched roof carrying a second array" width="2000" height="1125" fetchpriority="high">
-          <svg class="measure" viewBox="0 0 2000 1125" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-            <!-- flat-roof array: width -->
-            <line class="ext" x1="508" y1="150" x2="508" y2="226" />
-            <line class="ext" x1="1284" y1="150" x2="1284" y2="226" />
-            <line class="dim draw" pathLength="1" x1="508" y1="168" x2="1284" y2="168" style="--d:120ms" />
-            <path class="dim draw" pathLength="1" d="M496 156 L520 180 M1272 156 L1296 180" style="--d:120ms" />
-            <g class="tag" style="--d:120ms" data-x="896" data-y="168"><rect /><text>≈ 21 m</text></g>
-            <!-- flat-roof array: depth -->
-            <line class="ext" x1="430" y1="228" x2="506" y2="228" />
-            <line class="ext" x1="430" y1="1014" x2="506" y2="1014" />
-            <line class="dim draw" pathLength="1" x1="448" y1="228" x2="448" y2="1014" style="--d:320ms" />
-            <path class="dim draw" pathLength="1" d="M436 216 L460 240 M436 1002 L460 1026" style="--d:320ms" />
-            <g class="tag" style="--d:320ms" data-x="448" data-y="620"><rect /><text>≈ 24 m</text></g>
-            <!-- pitched face -->
-            <rect class="zone draw" pathLength="1" x="1316" y="200" width="434" height="372" style="--d:560ms" />
-            <g class="tag cu" style="--d:560ms" data-x="1533" data-y="620"><rect /><text>second face, pitched</text></g>
-            <g class="tag" style="--d:760ms" data-x="896" data-y="300"><rect /><text>5 module rows</text></g>
-          </svg>
+      <form class="planner" id="planner" action="contact.html" method="get" novalidate aria-labelledby="planner-h">
+        <div class="planner-head">
+          <h2 class="planner-title" id="planner-h">Fit panels to one roof face</h2>
+          <p class="planner-sub">Drawn to scale from the module sizes in the catalog.</p>
         </div>
-        <figcaption>
-          <span>Measurements drawn over an aerial photograph are illustrative. Flat-roof array, Dornbirn, Austria.</span>
-          <span>Photo: Asurnipal, CC BY-SA 4.0</span>
-        </figcaption>
-      </figure>
+        <div class="planner-draw">
+          <svg id="roof-svg" viewBox="0 0 640 360" role="img" aria-labelledby="roof-desc"><desc id="roof-desc">Scale drawing of the roof face with the modules that fit.</desc></svg>
+        </div>
+        <div class="planner-inputs">
+          <div class="field">
+            <label for="p-len">Face length</label>
+            <div class="unit-input"><input class="input" id="p-len" name="roofLength" type="number" inputmode="decimal" step="0.1" min="2" max="60" value="10.4"><span>m</span></div>
+          </div>
+          <div class="field">
+            <label for="p-hgt">Eaves to ridge</label>
+            <div class="unit-input"><input class="input" id="p-hgt" name="roofWidth" type="number" inputmode="decimal" step="0.1" min="2" max="30" value="5.7"><span>m</span></div>
+          </div>
+          <fieldset class="field planner-panels">
+            <legend class="label">Module</legend>
+            <div class="seg" id="p-panels"></div>
+          </fieldset>
+        </div>
+        <dl class="readout" aria-live="polite">
+          <div><dt>Modules</dt><dd id="r-count">–</dd></div>
+          <div><dt>Peak power</dt><dd><span id="r-kwp">–</span><small>kWp</small></dd></div>
+          <div><dt>Rows × columns</dt><dd id="r-layout">–</dd></div>
+        </dl>
+        <div class="planner-foot">
+          <button class="btn btn--copper" type="submit">Send this roof with an enquiry</button>
+          <p class="planner-note">Portrait layout with 0,2 m edge clearance. It ignores chimneys, vents and fire-code margins; your installer decides the real number.</p>
+        </div>
+      </form>
     </div>
+  </section>
+
+  <section class="aerial" aria-labelledby="aerial-h">
+    <div class="wrap aerial-head">
+      <h2 class="h2" id="aerial-h">A flat roof in Dornbirn, measured from the air</h2>
+      <p class="muted">The same thing the planner does, on a real roof: two faces, five long module rows and the space between them.</p>
+    </div>
+    <figure class="plate">
+      <div class="plate-frame">
+        <img class="photo" src="img/roof-plan-flat.jpg" alt="Aerial view of a flat roof with long parallel rows of solar modules next to a pitched roof carrying a second array" width="2000" height="1125" loading="lazy">
+        <svg class="measure" viewBox="0 0 2000 1125" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <line class="ext" x1="508" y1="150" x2="508" y2="226" />
+          <line class="ext" x1="1284" y1="150" x2="1284" y2="226" />
+          <line class="dim draw" pathLength="1" x1="508" y1="168" x2="1284" y2="168" style="--d:120ms" />
+          <path class="dim draw" pathLength="1" d="M496 156 L520 180 M1272 156 L1296 180" style="--d:120ms" />
+          <g class="tag" style="--d:120ms" data-x="896" data-y="168"><rect /><text>≈ 21 m</text></g>
+          <line class="ext" x1="430" y1="228" x2="506" y2="228" />
+          <line class="ext" x1="430" y1="1014" x2="506" y2="1014" />
+          <line class="dim draw" pathLength="1" x1="448" y1="228" x2="448" y2="1014" style="--d:320ms" />
+          <path class="dim draw" pathLength="1" d="M436 216 L460 240 M436 1002 L460 1026" style="--d:320ms" />
+          <g class="tag" style="--d:320ms" data-x="448" data-y="620"><rect /><text>≈ 24 m</text></g>
+          <rect class="zone draw" pathLength="1" x="1316" y="200" width="434" height="372" style="--d:560ms" />
+          <g class="tag cu" style="--d:560ms" data-x="1533" data-y="620"><rect /><text>Second face, pitched</text></g>
+          <g class="tag" style="--d:760ms" data-x="896" data-y="300"><rect /><text>5 module rows</text></g>
+        </svg>
+      </div>
+      <figcaption class="wrap">
+        <span>Measurements drawn over an aerial photograph are illustrative. Flat-roof array, Dornbirn, Austria.</span>
+        <span>Photo: Asurnipal, CC BY-SA 4.0</span>
+      </figcaption>
+    </figure>
   </section>
 
   <section class="section" aria-labelledby="supply-h">
     <div class="wrap">
-      <div class="grid sec-head">
-        <h2 class="h2" id="supply-h">What we supply</h2>
-        <p class="muted">Four kinds of equipment, each listed with full specifications. Choose a category to see its products.</p>
+      <div class="sec-head">
+        <h2 class="h2" id="supply-h">Four kinds of equipment</h2>
+        <p class="muted">Every product is listed with its full specifications, so you can choose by the numbers that fit your roof.</p>
       </div>
-      <ul class="ledger" id="category-ledger" aria-live="polite"></ul>
+      <ul class="cats" id="category-ledger"></ul>
     </div>
   </section>
 
-  <section class="section section--ruled rule" aria-labelledby="decide-h">
-    <div class="wrap grid decide">
-      <div class="decide-head">
-        <h2 class="h2" id="decide-h">Less noise. Better decisions.</h2>
-        <p class="body-copy">Useful documentation, straightforward comparisons, and a catalog that speaks in specifications—not slogans.</p>
-        <p><a class="link" href="compare.html?ids=arc-430,arc-455,grid-585">Open the full panel comparison</a></p>
-      </div>
-      <div class="decide-body">
-        <div class="table-frame"><table class="spec-table" id="panel-table"><caption class="visually-hidden">Panel specifications compared</caption></table></div>
-        <p class="small muted table-note" id="panel-note"></p>
+  <section class="section--flush" aria-labelledby="decide-h">
+    <div class="wrap">
+      <div class="panel decide">
+        <div class="decide-head">
+          <h2 class="h2" id="decide-h">Three panels, compared on the numbers</h2>
+          <p>Useful documentation, straightforward comparisons, and a catalog that speaks in specifications, not slogans.</p>
+          <p><a class="link" href="compare.html?ids=arc-430,arc-455,grid-585">Open the full panel comparison</a></p>
+        </div>
+        <div class="decide-body">
+          <div class="table-frame"><table class="spec-table" id="panel-table"><caption class="visually-hidden">Panel specifications compared</caption></table></div>
+          <p class="small muted table-note" id="panel-note"></p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section--tight">
+  <section class="section">
     <div class="wrap grid duo" id="duo"></div>
   </section>
 
-  <section class="section section--ruled rule" aria-labelledby="steps-h">
+  <section class="section section--top-0" aria-labelledby="steps-h">
     <div class="wrap">
-      <div class="grid sec-head">
+      <div class="sec-head">
         <h2 class="h2" id="steps-h">From order to roof</h2>
         <p class="muted">We source after you order and a qualified installer fits it. <a class="link" href="how-it-works.html">Read the full process and its limits</a>.</p>
       </div>
@@ -95,30 +131,14 @@
     </div>
   </section>
 
-  <section class="endcta section" aria-labelledby="end-h">
-    <div class="wrap grid">
-      <h2 class="h2" id="end-h">Have a roof in mind?</h2>
-      <p class="lede">Send us the dimensions, location and rough power goal. We'll help you narrow down the equipment.</p>
-      <form action="contact.html" method="get" id="quick-enquiry" novalidate>
-        <div class="field">
-          <label for="q-len">Roof face length</label>
-          <div class="unit-input"><input class="input" id="q-len" name="roofLength" type="number" inputmode="decimal" step="0.1" min="1" placeholder="10.4"><span>m</span></div>
-        </div>
-        <div class="field">
-          <label for="q-wid">Eaves to ridge</label>
-          <div class="unit-input"><input class="input" id="q-wid" name="roofWidth" type="number" inputmode="decimal" step="0.1" min="1" placeholder="5.7"><span>m</span></div>
-        </div>
-        <div class="field">
-          <label for="q-pc">Postcode</label>
-          <input class="input" id="q-pc" name="postcode" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="79098" autocomplete="postal-code">
-        </div>
-        <div class="field">
-          <label for="q-goal">Power goal</label>
-          <div class="unit-input"><input class="input" id="q-goal" name="powerGoal" type="number" inputmode="decimal" step="0.1" min="0.5" placeholder="8"><span>kWp</span></div>
-        </div>
-        <p class="measure-hint full" id="q-hint" aria-live="polite">Leave any field blank if you don't know it yet.</p>
-        <button class="btn full" type="submit">Continue to the enquiry form</button>
-      </form>
+  <section class="endcta" aria-labelledby="end-h">
+    <div class="wrap endcta-inner">
+      <h2 class="h2" id="end-h">Send us your roof's dimensions</h2>
+      <p class="lede">With the location and a rough power goal, we'll narrow the catalog down to a written equipment list.</p>
+      <div class="cta-row">
+        <a class="btn" href="contact.html">Start an enquiry</a>
+        <a class="btn btn--line" href="#planner">Use the roof planner</a>
+      </div>
     </div>
   </section>
 </main>

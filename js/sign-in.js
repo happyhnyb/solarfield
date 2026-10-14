@@ -28,7 +28,7 @@ $('#signin').innerHTML = s ? `
     <div class="aside-plate">
       <h2 class="h3">Why prices are behind sign-in</h2>
       <p>Vendor prices change, and installers and homeowners are often quoted differently. Signing in is how the real site would show you the right price list.</p>
-      <p class="small muted">Here it unlocks the demo prices from the catalog file. Nothing is checked or sent.</p>
+      <p class="small muted">Here it shows the demo prices from the catalog file. Nothing is checked or sent.</p>
     </div>
     <div class="aside-plate">
       <h2 class="h3">Don't want an account?</h2>

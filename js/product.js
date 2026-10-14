@@ -76,7 +76,7 @@ function init(d) {
       <span class="item-cat">${esc(cat.label)}</span>
       <h1>${esc(p.name)}</h1>
       <p class="flush">${esc(p.summary)}</p>
-      <div class="keyspec"><span class="num">${typeof p.keySpec.value === 'number' ? numDE(p.keySpec.value) : ''}</span><span class="mono">${esc(p.keySpec.unit || p.keySpec.value)}</span><span class="lbl">${esc(p.keySpec.label)}</span></div>
+      <div class="keyspec"><span class="num">${typeof p.keySpec.value === 'number' ? numDE(p.keySpec.value) : ''}</span><span class="val">${esc(p.keySpec.unit || p.keySpec.value)}</span><span class="lbl">${esc(p.keySpec.label)}</span></div>
       ${buyBlock}
       <label class="cmp-toggle"><input type="checkbox" id="cmp"${compare.ids().includes(p.id) ? ' checked' : ''}> Add to comparison</label>
       <ul class="note-list"><li>${esc(d.meta.sourcingNote)}</li><li>${esc(d.meta.priceNote)}</li></ul>
@@ -92,7 +92,7 @@ function init(d) {
       <div class="spec-side">
         <div>
           <h3 class="h3">Documents</h3>
-          <ul class="doc-list">${p.documents.map((x) => `<li><span>${esc(x.label)} <span class="mono muted">${esc(x.format)}</span></span><span class="mono">${esc(x.status)}</span></li>`).join('')}</ul>
+          <ul class="doc-list">${p.documents.map((x) => `<li><span>${esc(x.label)} <span class="val muted">${esc(x.format)}</span></span><span class="val">${esc(x.status)}</span></li>`).join('')}</ul>
         </div>
         <div>
           <h3 class="h3">Suited to</h3>
@@ -100,7 +100,7 @@ function init(d) {
         </div>
         <div>
           <h3 class="h3">Works with</h3>
-          <ul class="doc-list">${pairs.map((x) => `<li><a class="link" href="product.html?id=${x.id}">${esc(x.name)}</a><span class="mono">${esc(keySpecText(x))}</span></li>`).join('')}</ul>
+          <ul class="doc-list">${pairs.map((x) => `<li><a class="link" href="product.html?id=${x.id}">${esc(x.name)}</a><span class="val">${esc(keySpecText(x))}</span></li>`).join('')}</ul>
         </div>
       </div>
     </div>

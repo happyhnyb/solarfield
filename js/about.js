@@ -58,7 +58,7 @@ else {
         <div><h3 class="h3">Works</h3><ul>
           <li>Catalog search, category filter and sorting</li>
           <li>Comparison of up to three products in one category</li>
-          <li>Simulated sign-in that unlocks prices</li>
+          <li>Simulated sign-in that shows prices</li>
           <li>Cart with quantities, and a simulated checkout</li>
           <li>Quote requests, with or without signing in</li>
         </ul></div>
@@ -76,7 +76,7 @@ else {
   <section class="section--ruled rule section--bottom" id="credits" aria-labelledby="credits-h">
     <div class="wrap">
       <div class="grid sec-head"><h2 class="h2" id="credits-h">Photo credits</h2><p class="muted">All photographs are from Wikimedia Commons. They show other buildings and other manufacturers' equipment, never the listed products.</p></div>
-      <ul class="credits">${data.photoCredits.map((c) => `<li><a class="link" href="${esc(c.source)}" rel="noopener">${esc(c.title)}</a><span>${esc(c.author)}</span><span class="mono">${esc(c.license)}</span></li>`).join('')}</ul>
+      <ul class="credits">${data.photoCredits.map((c) => `<li><a class="link" href="${esc(c.source)}" rel="noopener">${esc(c.title)}</a><span>${esc(c.author)}</span><span class="val">${esc(c.license)}</span></li>`).join('')}</ul>
     </div>
   </section>`;
 }

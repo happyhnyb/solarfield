@@ -39,7 +39,7 @@ function init(d) {
         <select class="select" id="sort">
           ${SORTS.map(([v, l]) => `<option value="${v}"${v === state.sort ? ' selected' : ''}${v.startsWith('price') && !signedIn ? ' disabled' : ''}>${l}${v.startsWith('price') && !signedIn ? ' (sign in)' : ''}</option>`).join('')}
         </select>
-        ${signedIn ? '' : `<span class="hint">Sorting by price needs prices. <a class="link" href="sign-in.html?next=equipment.html">Sign in</a> to unlock it.</span>`}
+        ${signedIn ? '' : `<span class="hint"><a class="link" href="sign-in.html?next=equipment.html">Sign in</a> to sort by price.</span>`}
       </div>
     </aside>
     <section class="results" aria-labelledby="results-count">

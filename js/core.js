@@ -128,7 +128,7 @@ function footerHTML(data) {
     <div class="wrap grid">
       <div class="foot-brand">
         <span class="wordmark">SOLARFIELD</span>
-        <p>${esc(data?.meta.tagline ?? 'Good energy. No guesswork.')}</p>
+        <p>Good energy, no guesswork</p>
         <p class="muted">Solar equipment for German homeowners, installers and small commercial buyers.</p>
       </div>
       <nav class="foot-nav" aria-label="Footer">

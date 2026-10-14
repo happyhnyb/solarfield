@@ -22,7 +22,7 @@ function init(d) {
         <div class="study-head">
           <span class="fiction">Fictional case study</span>
           <h2 class="h2" id="${s.id}-h">${esc(s.title)}</h2>
-          <p class="small muted flush">${esc(s.customerType)}. ${esc(s.place)}.</p>
+          <p class="small muted flush">${esc(s.customerType)} in ${esc(s.place.replace('Illustrative location: ', ''))} (illustrative location)</p>
           <p class="flush">${esc(s.brief)}</p>
         </div>
         <div class="study-roof">

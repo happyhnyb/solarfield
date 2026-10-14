@@ -38,7 +38,7 @@ function render() {
           <div class="item-main">
             <span class="item-cat">${esc(categoryOf(d, l.p.category).label)}</span>
             <a class="item-name" href="product.html?id=${l.id}">${esc(l.p.name)}</a>
-            <span class="mono muted">${esc(keySpecText(l.p))}${signedIn ? `, ${money(l.p.price)} each` : ''}</span>
+            <span class="val muted">${esc(keySpecText(l.p))}${signedIn ? `, ${money(l.p.price)} each` : ''}</span>
             <button class="textbtn link small remove" type="button" data-id="${l.id}" data-act="remove">Remove</button>
           </div>
           <div class="qty" role="group" aria-label="Quantity of ${esc(l.p.name)}">
